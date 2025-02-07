@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import Avatar from '@mui/material/Avatar';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -152,38 +152,44 @@ const Pages = styled.div`
 `;
 
 const BookCard = ({ title, picture, description, pages, authorName }) => {
-  return (
-    <Card>
-        <div>
-            <Top>
-                <Favorite>
-                    <FavoriteIcon style={{ width: "16px", height: "16px" }} />
-                </Favorite>
-                <CardImage src={picture} />
-            </Top>
-            <CardInformation>
-                <MainInfo>
-                    <Title>{title}</Title>
-                    <Description>
-                        {" "}
-                        {description} 
-                    </Description>
-                    <AuthorInfo>
-                        <Author>
-                            <Avatar style={{ width: "26px", height: "26px" }}>J</Avatar>
-                            <AuthorName>{authorName}</AuthorName>
-                        </Author>
-                        <Pages>{pages} Pages</Pages>
-                    </AuthorInfo>
-                </MainInfo>
-            </CardInformation>
-        </div>
-        
-        <BookIcon>
-            <MenuBook style={{ width: "28px", height: "28px" }} />
-        </BookIcon>
-    </Card>
-  )
+    const [favourite, setFavourite] = useState(false)
+
+    return (
+        <Card>
+            <div>
+                <Top>
+                    <Favorite>
+                        {favourite ? 
+                            <FavoriteIcon style={{ width: "16px", height: "16px", color: "#E30022" }} />
+                            :
+                            <FavoriteIcon style={{ width: "16px", height: "16px" }} />
+                        }
+                    </Favorite>
+                    <CardImage src={picture} />
+                </Top>
+                <CardInformation>
+                    <MainInfo>
+                        <Title>{title}</Title>
+                        <Description>
+                            {" "}
+                            {description} 
+                        </Description>
+                        <AuthorInfo>
+                            <Author>
+                                <Avatar style={{ width: "26px", height: "26px" }}>J</Avatar>
+                                <AuthorName>{authorName}</AuthorName>
+                            </Author>
+                            <Pages>{pages} Pages</Pages>
+                        </AuthorInfo>
+                    </MainInfo>
+                </CardInformation>
+            </div>
+            
+            <BookIcon>
+                <MenuBook style={{ width: "28px", height: "28px" }} />
+            </BookIcon>
+        </Card>
+    )
 }
 
 export default BookCard
