@@ -28,7 +28,7 @@ const Topic = styled.div`
   }
 `;
 
-const FavouriteContainer = styled.div`
+const FavouriteContainer = styled.div` 
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -45,28 +45,28 @@ const Favourites = () => {
       <Topic>Favourites</Topic>
       <FavouriteContainer>
       <BookCard 
-          title="The Naturals (The Naturals, 1)" 
-          picture={Book1} 
-          description="The Naturals by Jennifer Lynn Barnes is a young adult 
-          psychological thriller novel published in 2013. It follows Cassie 
-          Hobbes, a 17-year-old girl with an exceptional ability to read people. 
-          Because of her natural talent for profiling, she is recruited by the 
-          FBI to join a special program for gifted teenagers who help solve cold 
-          cases."
-          authorName="Jennifer Lynn Barnes"
-          pages="308"
+        title="The Naturals (The Naturals, 1)" 
+        picture={Book1} 
+        description="The Naturals by Jennifer Lynn Barnes is a young adult 
+        psychological thriller novel published in 2013. It follows Cassie 
+        Hobbes, a 17-year-old girl with an exceptional ability to read people. 
+        Because of her natural talent for profiling, she is recruited by the 
+        FBI to join a special program for gifted teenagers who help solve cold 
+        cases."
+        authorName="Jennifer Lynn Barnes"
+        pages="308"
       />
       <BookCard 
-          title="Killer Instinct (The Naturals 2)" 
-          picture={Book2}
-          description="After the events of the first book, Cassie Hobbes and her 
-          fellow Naturals are still recovering from their last case. However, 
-          things take a dark turn when a new serial killer emerges, copying the 
-          methods of Dean’s father, a notorious murderer. As Dean struggles with 
-          his past, Cassie and the team must work to stop the killer before it's 
-          too late."
-          authorName="Jennifer Lynn Barnes"
-          pages="384"
+        title="Killer Instinct (The Naturals 2)" 
+        picture={Book2}
+        description="After the events of the first book, Cassie Hobbes and her 
+        fellow Naturals are still recovering from their last case. However, 
+        things take a dark turn when a new serial killer emerges, copying the 
+        methods of Dean’s father, a notorious murderer. As Dean struggles with 
+        his past, Cassie and the team must work to stop the killer before it's 
+        too late."
+        authorName="Jennifer Lynn Barnes"
+        pages="384"
       />
       </FavouriteContainer>
     </Container>
